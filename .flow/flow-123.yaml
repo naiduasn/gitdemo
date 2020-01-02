@@ -1,0 +1,32 @@
+---
+kind: Pipeline
+apiVersion: flow-v1-beta
+pipeline:
+  id: 123
+  arguments:
+    parameters:
+    - name: jira
+      value: JIRA-123
+    - name: PR
+      value: PR-123
+  steps:
+    clone-step:
+      arguments:
+        parameters:
+        - name: JIRA
+          value: FLOW-123
+    build-step:
+      arguments:
+        parameters:
+        - name: MAVEN_VERSION
+          value: 3.2.5
+    test-step:
+      arguments:
+        parameters:
+        - name: MAVEN_VERSION
+          value: 3.2.5
+    package-step:
+      arguments:
+        parameters:
+        - name: REPO_VERSION
+          value: '123'
