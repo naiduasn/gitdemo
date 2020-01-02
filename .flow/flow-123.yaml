@@ -3,6 +3,7 @@ kind: Pipeline
 apiVersion: flow-v1-beta
 pipeline:
   id: 123
+  enabled: true
   arguments:
     parameters:
     - name: jira
